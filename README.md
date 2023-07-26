@@ -2,6 +2,8 @@
 Projetos de integração com APIs externas
 
 ### Projeto Node
+Essa é uma integração com uma api que disponibiliza informações de Pessoas Jurídicas. Obtemos dados das empresas passando o CNPJ como parâmetro da requisição
+
 O projeto Node pode ser executado via Docker seguindo os seguintes passos:
 
 1. Clonar este repositório
@@ -12,6 +14,8 @@ O projeto Node pode ser executado via Docker seguindo os seguintes passos:
 5. Abrir a URL [http://localhost:4000/api-docs](http://localhost:4000/api-docs) do Swagger
 
 ### Projeto Java
+Essa é uma integração com a API da Viacep para obter endereços através do CEP
+
 É possível subir o servidor do projeto Java usando Docker seguindo os seguintes passos:
 
 1. Abrir a pasta `projeto-java` e dentro dela acessar a pasta `back-end`
