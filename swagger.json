@@ -1,0 +1,58 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de consulta a dados de Empresas",
+    "description": "Essa API faz integração com serviço externo para obter dados de empresas pelo CNPJ"
+  },
+  "paths": {
+    "/api/v1/{cnpj}/cnpj": {
+      "get": {
+        "summary": "Consulta de CNPJ",
+        "description": "Esse endpoint obtém dados de empresas pelo CNPJ",
+        "tags": ["Company"],
+        "parameters": [
+          {
+            "name": "cnpj",
+            "type": "number",
+            "required": true,
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Company"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Company": {
+        "type": "object",
+        "properties": {
+          "NOME FANTASIA": {
+            "type": "string"
+          },
+          "RAZAO SOCIAL": {
+            "type": "string"
+          },
+          "CNPJ": {
+            "type": "string"
+          },
+          "STATUS": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
