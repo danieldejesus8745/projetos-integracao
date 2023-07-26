@@ -1,0 +1,33 @@
+
+spring:
+  profiles:
+    active: prod
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  server:
+    error:
+      include-message: always
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    url: ${DATABASE_URL}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  server:
+    error:
+      include-message: always
