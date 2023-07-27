@@ -2,7 +2,10 @@
 import { ref } from 'vue';
 
 let cep = ref('');
-const address = ref([]);
+let address = ref<Address>({
+  address: null,
+  message: ''
+});
 const url = "http://localhost:8080/api/v1/addresses";
 
 function addressSearch() {
@@ -12,9 +15,14 @@ function addressSearch() {
 
   fetch(`${url}/${cep?.value}/address`, options)
   .then(response => response.json())
-  .then(data => address.value = data)
+  .then(data => address = data)
   .catch(error => console.log(error))
   .finally(() => cep.value = '');
+}
+
+interface Address {
+  address: any;
+  message: string;
 }
 </script>
 
