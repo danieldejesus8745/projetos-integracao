@@ -16,11 +16,11 @@ O projeto Node pode ser executado via Docker seguindo os seguintes passos:
 ### Projeto Java
 Essa é uma integração com a API da Viacep para obter endereços através do CEP
 
-É possível subir o servidor do projeto Java usando Docker seguindo os seguintes passos:
+É possível subir o back-end do projeto Java usando Docker seguindo os seguintes passos:
 
 1. Abrir a pasta `projeto-java` e dentro dela acessar a pasta `back-end`
-2. É necessário compilar o projeto, isso pode ser feito dentro do Intellij na aba do Maven
-3. Após a compilação basta executar o comando `docker compose up -d` para subir o servidor
+3. Executar o comando:
+> `docker compose up -d`
 
 #### front-end
 O front-end que consome a aplicação Java foi desenvolvido em VueJs e para abrí-lo basta seguir os seguintes passos:
